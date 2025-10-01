@@ -1,0 +1,84 @@
+* {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  background: #f9fafb;
+  color: #1f2937;
+  scroll-behavior: smooth;
+}
+header {
+  position: fixed; top: 0; width: 100%;
+  background: white; padding: 15px 50px;
+  display: flex; justify-content: space-between; align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+header .logo {
+  color: #4f46e5; font-size: 1.5em; font-weight: 600;
+}
+header ul {
+  display: flex; list-style: none;
+}
+header ul li { margin: 0 15px; }
+header ul li a {
+  text-decoration: none; color: #374151; font-weight: 500;
+  transition: 0.3s;
+}
+header ul li a.active, header ul li a:hover {
+  color: #06b6d4;
+}
+
+.hero {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  min-height: 100vh; padding: 80px 10%;
+  background: linear-gradient(135deg, #4f46e5, #06b6d4);
+  color: white; text-align: center;
+}
+.hero-text h1 { font-size: 2.5em; animation: fadeInLeft 1s ease; }
+.hero-text span { color: #facc15; }
+.hero-text p { margin: 15px 0; font-size: 1.2em; }
+.btn {
+  padding: 12px 25px; background: white; color: #4f46e5;
+  font-weight: bold; border-radius: 30px; text-decoration: none;
+  transition: 0.3s;
+}
+.btn:hover { background: #f43f5e; color: white; }
+
+section { padding: 80px 10%; text-align: center; }
+#skills .skills-container {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;
+}
+#skills span {
+  background: #e0f2fe; color: #0369a1;
+  padding: 10px 20px; border-radius: 20px;
+  font-weight: 500; animation: bounce 2s infinite;
+}
+
+.projects-container {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;
+}
+.card {
+  background: white; border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  padding: 20px; max-width: 350px;
+  transition: transform 0.3s;
+}
+.card:hover { transform: translateY(-10px) scale(1.05); }
+.card img { width: 100%; border-radius: 10px; margin-bottom: 15px; }
+
+footer {
+  background: #1f2937; color: white;
+  text-align: center; padding: 20px 0;
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
